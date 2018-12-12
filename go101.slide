@@ -387,7 +387,13 @@ defer is stack
 
 * struct
 .background Go-Presentation-Theme.png
-represents json,xml
+represents json
+.play struct_json.go /^func main/,/END OMIT/
+
+* struct
+.background Go-Presentation-Theme.png
+represents xml
+.play struct_xml.go /^func main/,/END OMIT/
 
 
 * method
