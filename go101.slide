@@ -143,6 +143,22 @@ such as
 - first-class functions
 - variadic functions
 
+* Anonymous Function
+.background Go-Presentation-Theme.png
+.play func_anonymous.go
+
+* Closure Function
+.background Go-Presentation-Theme.png
+.play func_closure.go
+
+* Closure Function
+.background Go-Presentation-Theme.png
+.play func_closure_more.go
+
+* First-Class Function
+.background Go-Presentation-Theme.png
+.play func_firstclass.go
+
 * idiom
 .background Go-Presentation-Theme.png
 
@@ -210,6 +226,27 @@ basic type
     float32 float64
 
     complex64 complex128
+
+* Alias Type
+.background Go-Presentation-Theme.png
+
+    type alias = T
+
+.play type_alias.go
+
+* Custom Type
+.background Go-Presentation-Theme.png
+
+    type newType T
+
+.play type_custom_primitive.go
+
+* Custom Type
+.background Go-Presentation-Theme.png
+
+    type newType T
+
+.play type_custom_func.go
 
 * Zero Value
 
@@ -321,11 +358,36 @@ and is *not* *guaranteed* to be the same from one iteration to the next.
 * defer
 
 .background Go-Presentation-Theme.png
+.play defer_simple.go
+
+* defer
+
+defer is stack
+
+.background Go-Presentation-Theme.png
+.play defer_stack.go
+
+* defer
+.background Go-Presentation-Theme.png
+.play defer_func.go
+
+* defer
+.background Go-Presentation-Theme.png
+.play defer_anonymous.go
+
+* defer
+.background Go-Presentation-Theme.png
+.play defer_panic.go
+
 
 * struct
 
 .background Go-Presentation-Theme.png
 .play struct.go
+
+* struct
+.background Go-Presentation-Theme.png
+represents json,xml
 
 
 * method
