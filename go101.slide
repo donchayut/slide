@@ -242,47 +242,17 @@ iota
 * for is for
 
 .background Go-Presentation-Theme.png
-
-    package main
-
-    import "fmt"
-
-    func main() {
-        sum := 0
-        for i := 0; i < 10; i++ {
-            sum += i
-        }
-        fmt.Println(sum)
-    }
+.play for_for.go
 
 * while is for
 
 .background Go-Presentation-Theme.png
-
-    package main
-
-    import "fmt"
-
-    func main() {
-        sum := 1
-        for ; sum < 1000; {
-            sum += sum
-        }
-        fmt.Println(sum)
-    }
+.play for_while.go
 
 * for multiple Value
 
 .background Go-Presentation-Theme.png
-
-    sum := 0
-    for i := 0; i < 10; i++ {
-    sum += i
-    }
-    // Reverse a
-    for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
-    a[i], a[j] = a[j], a[i]
-    }
+.play for_multiple.go
 
 * if
 
@@ -316,20 +286,7 @@ if {} else if {} else {}
 
 The type [n]T
 
-    package main
-
-    import "fmt"
-
-    func main() {
-        var a [2]string
-        a[0] = "Hello"
-        a[1] = "World"
-        fmt.Println(a[0], a[1])
-        fmt.Println(a)
-
-        primes := [...]int{2, 3, 5, 7, 11, 13}
-        fmt.Println(primes)
-    }
+.play array.go
 
 * slice []T
 
@@ -368,81 +325,37 @@ and is *not* *guaranteed* to be the same from one iteration to the next.
 * struct
 
 .background Go-Presentation-Theme.png
+.play struct.go
 
-    package main
-
-    import "fmt"
-
-    type rectangle struct {
-        width int
-        length int
-    }
-
-    func main() {
-        fmt.Println(rectangle{1, 2})
-    }
 
 * method
 
 .background Go-Presentation-Theme.png
-
-    package main
-
-    import "fmt"
-
-    type rectangle struct {
-        width int
-        length int
-    }
-
-    func area(rec rectangle) int {
-        return rec.width * rec.length
-    }
-
-    func main() {
-        rec := rectangle{3, 4}
-        fmt.Println(area(rec))
-    }
+.play struct_func.go
 
 * method
 
 .background Go-Presentation-Theme.png
+.play struct_method.go
 
-    package main
-
-    import "fmt"
-
-    type rectangle struct {
-        width int
-        length int
-    }
-
-    func (rec rectangle) area() int {
-        return rec.width * rec.length
-    }
-
-    func main() {
-        rec := rectangle{3, 4}
-        fmt.Println(rec.area()))
-    }
 
 * interface
 
 .background Go-Presentation-Theme.png
 
 empty interface
+.play interface_empty.go
 
-    package main
+* interface: type assertion
 
-    import "fmt"
+.background Go-Presentation-Theme.png
 
-    func main() {
-        var v interface{}
-        v = 1
-        fmt.Printf("%T %#v\n",v,v)
-        v = "1"
-        fmt.Printf("%T %#v\n",v,v)
-    }
+.play interface_assert.go
+
+* interface: type switch
+
+.background Go-Presentation-Theme.png
+.play interface_switch.go
 
 * interface 
 
@@ -462,23 +375,6 @@ To define a set of method signatures
 
 `Interfaces` `are` `implemented` `implicitly`
 
-* interface: type assertion
-
-.background Go-Presentation-Theme.png
-
-    var i interface{} = “hello”
-    s := i.(string)
-    s, ok := i.(string)
-
-* interface: type switch
-
-.background Go-Presentation-Theme.png
-
-    switch v := i.(type) {
-        case int:
-        case string:
-        default:
-    }
 
 * interface: Stringer
 
