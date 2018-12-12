@@ -11,14 +11,17 @@ yod.pallat@gmail.com
 https://github.com/pallat
 
 * Docker written in go
+.background Go-Presentation-Theme.png
 .image docker.png
 .image gopher.png
 
 * What should you know
+.background Go-Presentation-Theme.png
 .link https://tour.golang.org
 .link https://www.facebook.com/groups/584867114995854/ Golang Thailand
 
 * Installing
+.background Go-Presentation-Theme.png
 .link https://golang.org
 
 *mac/linux*
@@ -33,6 +36,8 @@ Download file.zip
 
 
 * GOROOT
+.background Go-Presentation-Theme.png
+
 *mac/linux*
 
     export GOROOT=~/goroot
@@ -47,11 +52,13 @@ Download file.zip
 
 
 * GOROOT vs GOPATH
+.background Go-Presentation-Theme.png
 
 *GOROOT* is golang sdk
 *GOPATH* for projects & third-party libraries
 
 * Project structure
+.background Go-Presentation-Theme.png
 
     bin/
         hello                          # command executable
@@ -79,22 +86,30 @@ Download file.zip
         ... (many more repositories and packages omitted) ...
 
 * editor
+.background Go-Presentation-Theme.png
 .image editor.png
 
 * editor
+.background Go-Presentation-Theme.png
 .image editor2016-2017.png 300 _
 
 * os
+.background Go-Presentation-Theme.png
 .image dev_on_os.png
 
 * Keywords
+.background Go-Presentation-Theme.png
+
     break        default      func         interface    select
     case         defer        go           map          struct
     chan         else         goto         package      switch
     const        fallthrough  if           range        type
     continue     for          import       return       var
 
+
 * Package
+
+.background Go-Presentation-Theme.png
 - every *.go* file must have *package* keyword on top
 - package name should same with directory name
 - any directories can only have one package, except plus _test in it
@@ -104,6 +119,8 @@ such as
     package demo_test 
 
 * Function
+.background Go-Presentation-Theme.png
+
     func abs(m float64) float64 {
         f := float64(m)
         if f < 0 {
@@ -114,17 +131,20 @@ such as
 
 * Function
 
+.background Go-Presentation-Theme.png
 - func main
 - func init
 
 * Function supports
 
+.background Go-Presentation-Theme.png
 - anonymous functions
 - closures functions
 - first-class functions
 - variadic functions
 
 * idiom
+.background Go-Presentation-Theme.png
 
 *Good name*
 
@@ -138,6 +158,7 @@ such as
     Ex: NewRing
 
 * idiom
+.background Go-Presentation-Theme.png
 
 *getter*
 
@@ -158,6 +179,7 @@ such as
     }
 
 * Variable
+.background Go-Presentation-Theme.png
 
     var c, python, java bool
 
@@ -168,6 +190,7 @@ such as
     c, python, java := true, false, "no!"
 
 * Type
+.background Go-Presentation-Theme.png
 
 basic type
 
@@ -190,18 +213,23 @@ basic type
 
 * Zero Value
 
+.background Go-Presentation-Theme.png
+
 - *0*  _for_ _numeric_ _types_
 - *false* _for_ _the_ _boolean_ _type_
 - *""* (the empty string) for strings
 
 * const
 
+.background Go-Presentation-Theme.png
 iota
 
     iota expression is repeated by the other constants 
     until another assignment or type declaration shows up.
 
 * for
+
+.background Go-Presentation-Theme.png
 
     for init; condition; post { }
 
@@ -212,6 +240,8 @@ iota
     for { }
 
 * for is for
+
+.background Go-Presentation-Theme.png
 
     package main
 
@@ -227,6 +257,8 @@ iota
 
 * while is for
 
+.background Go-Presentation-Theme.png
+
     package main
 
     import "fmt"
@@ -241,6 +273,8 @@ iota
 
 * for multiple Value
 
+.background Go-Presentation-Theme.png
+
     sum := 0
     for i := 0; i < 10; i++ {
     sum += i
@@ -251,6 +285,8 @@ iota
     }
 
 * if
+
+.background Go-Presentation-Theme.png
 
     func sqrt(x float64) string {
         if x < 0 {
@@ -265,6 +301,8 @@ if {} else if {} else {}
 
 * if statement; condition {}
 
+.background Go-Presentation-Theme.png
+
     func pow(x, n, lim float64) float64 {
         if v := math.Pow(x, n); v < lim {
             return v
@@ -273,6 +311,8 @@ if {} else if {} else {}
     }
 
 * array
+
+.background Go-Presentation-Theme.png
 
 The type [n]T
 
@@ -293,6 +333,7 @@ The type [n]T
 
 * slice []T
 
+.background Go-Presentation-Theme.png
     References to arrays
     Zero value is nil
     cap() number of elements in the underlying array
@@ -305,6 +346,8 @@ The type [n]T
 .link https://tour.golang.org/moretypes/18 exercise
 
 * map map[T]T
+
+.background Go-Presentation-Theme.png
 
     Zero value is nil
     len() number of elements it contains
@@ -320,7 +363,11 @@ and is *not* *guaranteed* to be the same from one iteration to the next.
 
 * defer
 
+.background Go-Presentation-Theme.png
+
 * struct
+
+.background Go-Presentation-Theme.png
 
     package main
 
@@ -336,6 +383,8 @@ and is *not* *guaranteed* to be the same from one iteration to the next.
     }
 
 * method
+
+.background Go-Presentation-Theme.png
 
     package main
 
@@ -357,6 +406,8 @@ and is *not* *guaranteed* to be the same from one iteration to the next.
 
 * method
 
+.background Go-Presentation-Theme.png
+
     package main
 
     import "fmt"
@@ -377,6 +428,8 @@ and is *not* *guaranteed* to be the same from one iteration to the next.
 
 * interface
 
+.background Go-Presentation-Theme.png
+
 empty interface
 
     package main
@@ -392,6 +445,8 @@ empty interface
     }
 
 * interface 
+
+.background Go-Presentation-Theme.png
 
 To define a set of method signatures
 
@@ -409,11 +464,15 @@ To define a set of method signatures
 
 * interface: type assertion
 
+.background Go-Presentation-Theme.png
+
     var i interface{} = “hello”
     s := i.(string)
     s, ok := i.(string)
 
 * interface: type switch
+
+.background Go-Presentation-Theme.png
 
     switch v := i.(type) {
         case int:
@@ -423,11 +482,15 @@ To define a set of method signatures
 
 * interface: Stringer
 
+.background Go-Presentation-Theme.png
+
     type Stringer interface {
         String() string
     }
 
 * interface: error
+
+.background Go-Presentation-Theme.png
 
     type error interface {
         Error() string
@@ -435,4 +498,9 @@ To define a set of method signatures
 
 * goroutine
 
+.background Go-Presentation-Theme.png
+
 * channel
+
+.background Go-Presentation-Theme.png
+
