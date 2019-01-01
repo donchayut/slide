@@ -1,12 +1,19 @@
-go
+go 101
 
 14:03 20 Mar 2018
 Tags: golang
 
-Weerasak Chongnguluam
-Anuchit Prasertsang
 Pallat Anchaleechamaikorn
+Technical Coach @ Tech Inno
+golang developer
 
+yod.pallat@gmail.com
+https://github.com/pallat
+
+* Docker written in go
+.background Go-Presentation-Theme.png
+.image docker.png
+.image gopher.png
 
 * What should you know
 .background Go-Presentation-Theme.png
