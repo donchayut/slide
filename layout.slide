@@ -1,0 +1,23 @@
+code structure in go
+
+5 Jan 2019
+Tags: golang
+
+Pallat Anchaleechamaikorn
+Technical Coach @ Tech Inno
+golang developer
+
+yod.pallat@gmail.com
+https://github.com/pallat
+
+
+* Does Golang have layout standard?
+
+* golang standards project layout we found on internet
+.link https://github.com/golang-standards/project-layout
+
+.link https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1 Standard Package Layout
+.link https://github.com/goknowgo/basic/tree/layout demo
+
+* Organizing Go code
+.link https://talks.golang.org/2014/organizeio.slide#1
