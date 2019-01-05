@@ -1,4 +1,5 @@
-code structure in go
+code structure
+and naming convention in go
 
 5 Jan 2019
 Tags: golang
@@ -10,6 +11,50 @@ golang developer
 yod.pallat@gmail.com
 https://github.com/pallat
 
+
+* Convention
+
+* What are your feeling?
+.image 47-sublime-pictures-that-will-delight-the-perfectionist-in-you-i-almost-can-t-handle-4-33.jpg
+* What are your feeling?
+.image 47-sublime-pictures-that-will-delight-the-perfectionist-in-you-i-almost-can-t-handle-4-34.jpg
+* What are your feeling?
+.image 47-sublime-pictures-that-will-delight-the-perfectionist-in-you-i-almost-can-t-handle-4-41.jpg
+* What are your feeling?
+.image annoying-photos-ocd-611__605.jpg
+* What are your feeling?
+.image annoying-photos-ocd-12__605.jpg
+* What are your feeling?
+.image annoying-photos-ocd-81__605.jpg _ 500
+* What are your feeling?
+.image annoying-photos-ocd-34__605.jpg
+* What are your feeling?
+.image annoying-photos-ocd-53__605.jpg
+
+* What is the Naming convention of go
+.link https://golang.org/doc/effective_go.html#mixed-caps
+
+* Naming Convention
+.link https://en.wikipedia.org/wiki/Naming_convention_(programming)
+
+*** Delimiter-separated words
+two words" would be represented as "two-words" or "two_words"
+
+*** Letter case-separated words
+two words" as either "twoWords" or "TwoWords"
+
+Finally, the convention in Go is to use MixedCaps or mixedCaps rather than underscores to write multiword names.
+
+* How to naming const in go
+.link https://stackoverflow.com/questions/22688906/go-naming-conventions-for-const
+
+The standard library uses camel-case, so I advise you do that as well. The first letter is uppercase or lowercase depending on whether you want to export the constant.
+
+A few examples:
+
+    md5.BlockSize
+    os.O_RDONLY is an exception because it was borrowed directly from POSIX.
+    os.PathSeparator
 
 * Does Golang have layout standard?
 
