@@ -87,15 +87,15 @@ Download file.zip
 
 * editor
 .background Go-Presentation-Theme.png
-.image editor.png
+.link https://golang.org/doc/editors.html
 
-* editor
+* editor 2019
 .background Go-Presentation-Theme.png
-.image editor2016-2017.png 300 _
+.image editor2019.png 500 _
 
-* os
+* Documentation
 .background Go-Presentation-Theme.png
-.image dev_on_os.png
+.link https://golang.org/doc/
 
 * Keywords
 .background Go-Presentation-Theme.png
@@ -106,6 +106,12 @@ Download file.zip
     const        fallthrough  if           range        type
     continue     for          import       return       var
 
+
+* Hello World
+
+.background Go-Presentation-Theme.png
+.link https://play.golang.org/
+.play hello.go
 
 * Package
 
@@ -135,29 +141,38 @@ such as
 - func main
 - func init
 
-* Function supports
-
+* Variable
 .background Go-Presentation-Theme.png
-- anonymous functions
-- closures functions
-- first-class functions
-- variadic functions
 
-* Anonymous Function
-.background Go-Presentation-Theme.png
-.play func_anonymous.go
+    var c, python, java bool
 
-* Closure Function
-.background Go-Presentation-Theme.png
-.play func_closure.go
+    var i, j int = 1, 2
 
-* Closure Function
-.background Go-Presentation-Theme.png
-.play func_closure_more.go
+    var c, python, java = true, false, "no!"
 
-* First-Class Function
+    c, python, java := true, false, "no!"
+
+* Type
 .background Go-Presentation-Theme.png
-.play func_firstclass.go
+
+basic type
+
+    bool
+
+    string
+
+    int  int8  int16  int32  int64
+
+    uint uint8 uint16 uint32 uint64 uintptr
+
+    byte  // alias for uint8
+
+    rune  // alias for int32
+          // represents a Unicode code point
+
+    float32 float64
+
+    complex64 complex128
 
 * idiom
 .background Go-Presentation-Theme.png
@@ -194,60 +209,6 @@ such as
             obj.SetOwner(user)
     }
 
-* Variable
-.background Go-Presentation-Theme.png
-
-    var c, python, java bool
-
-    var i, j int = 1, 2
-
-    var c, python, java = true, false, "no!"
-
-    c, python, java := true, false, "no!"
-
-* Type
-.background Go-Presentation-Theme.png
-
-basic type
-
-    bool
-
-    string
-
-    int  int8  int16  int32  int64
-
-    uint uint8 uint16 uint32 uint64 uintptr
-
-    byte  // alias for uint8
-
-    rune  // alias for int32
-          // represents a Unicode code point
-
-    float32 float64
-
-    complex64 complex128
-
-* Alias Type
-.background Go-Presentation-Theme.png
-
-    type alias = T
-
-.play type_alias.go
-
-* Custom Type
-.background Go-Presentation-Theme.png
-
-    type newType T
-
-.play type_custom_primitive.go
-
-* Custom Type
-.background Go-Presentation-Theme.png
-
-    type newType T
-
-.play type_custom_func.go
-
 * Zero Value
 
 .background Go-Presentation-Theme.png
@@ -263,6 +224,32 @@ iota
 
     iota expression is repeated by the other constants 
     until another assignment or type declaration shows up.
+
+* if
+
+.background Go-Presentation-Theme.png
+
+    func sqrt(x float64) string {
+        if x < 0 {
+            return sqrt(-x) + "i"
+        }
+        return fmt.Sprint(math.Sqrt(x))
+    }
+
+if {}
+if {} else {}
+if {} else if {} else {}
+
+* if statement; condition {}
+
+.background Go-Presentation-Theme.png
+
+    func pow(x, n, lim float64) float64 {
+        if v := math.Pow(x, n); v < lim {
+            return v
+        }
+        return lim
+    }
 
 * for
 
@@ -291,32 +278,6 @@ iota
 .background Go-Presentation-Theme.png
 .play for_multiple.go
 
-* if
-
-.background Go-Presentation-Theme.png
-
-    func sqrt(x float64) string {
-        if x < 0 {
-            return sqrt(-x) + "i"
-        }
-        return fmt.Sprint(math.Sqrt(x))
-    }
-
-if {}
-if {} else {}
-if {} else if {} else {}
-
-* if statement; condition {}
-
-.background Go-Presentation-Theme.png
-
-    func pow(x, n, lim float64) float64 {
-        if v := math.Pow(x, n); v < lim {
-            return v
-        }
-        return lim
-    }
-
 * array
 
 .background Go-Presentation-Theme.png
@@ -337,7 +298,51 @@ The type [n]T
     Range
     [:]
 
-.link https://tour.golang.org/moretypes/18 exercise
+* Exercise
+
+.background Go-Presentation-Theme.png
+.link https://tour.golang.org/moretypes/18 Picture
+
+- for
+- slice/array
+- cast type
+- first class function
+
+* Excercise
+
+.background Go-Presentation-Theme.png
+
+read csv file and print it out
+format [aaa] - [bbb] [ccc] - ...
+
+.link https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html
+.link https://golang.org/pkg/encoding/csv/ https://golang.org/pkg/encoding/csv/
+
+* TDD FizzBuzz
+
+.background Go-Presentation-Theme.png
+1 === "1"
+2 === "2"
+3 === "Fizz"
+4 === "4"
+5 === "Buzz"
+6 === "Fizz"
+7 === "7"
+8 === "8"
+9 === "Fizz"
+10 === "Buzz"
+11 === "11"
+12 === "Fizz"
+13 === "13"
+14 === "14"
+15 === "FizzBuzz"
+30 === "FizzBuzz"
+
+* Ecercise RESTful service with net/http
+
+.background Go-Presentation-Theme.png
+.link https://golang.org/pkg/net/http/#example_ListenAndServe https://golang.org/pkg/net/http/#example_ListenAndServe
+
 
 * map map[T]T
 
@@ -355,32 +360,17 @@ When iterating over a map with a range loop,
 the iteration order is *not* *specified*
 and is *not* *guaranteed* to be the same from one iteration to the next.
 
-* defer
+* Exercise TodoList store in mem
 
+* Custom Type
 .background Go-Presentation-Theme.png
-.play defer_simple.go
 
-* defer
+    type newType T
 
-defer is stack
-
-.background Go-Presentation-Theme.png
-.play defer_stack.go
-
-* defer
-.background Go-Presentation-Theme.png
-.play defer_func.go
-
-* defer
-.background Go-Presentation-Theme.png
-.play defer_anonymous.go
-
-* defer
-.background Go-Presentation-Theme.png
-.play defer_panic.go
-
+.play type_custom_primitive.go
 
 * struct
+is a type custom
 
 .background Go-Presentation-Theme.png
 .play struct.go
@@ -396,6 +386,26 @@ represents xml
 .play struct_xml.go /^func main/,/END OMIT/
 
 
+* Exercise TodoList store to Postgre
+
+* Exercise TodoList store to MongoDB
+
+
+* Custom Type: func
+.background Go-Presentation-Theme.png
+
+    type newType T
+
+.play type_custom_func.go
+
+
+* Alias Type
+.background Go-Presentation-Theme.png
+
+    type alias = T
+
+.play type_alias.go
+
 * method
 
 .background Go-Presentation-Theme.png
@@ -406,6 +416,10 @@ represents xml
 .background Go-Presentation-Theme.png
 .play struct_method.go
 
+* method
+
+.background Go-Presentation-Theme.png
+on any type custom
 
 * interface
 
@@ -468,3 +482,50 @@ To define a set of method signatures
 
 .background Go-Presentation-Theme.png
 
+* defer
+
+.background Go-Presentation-Theme.png
+.play defer_simple.go
+
+* defer
+
+defer is stack
+
+.background Go-Presentation-Theme.png
+.play defer_stack.go
+
+* defer
+.background Go-Presentation-Theme.png
+.play defer_func.go
+
+* defer
+.background Go-Presentation-Theme.png
+.play defer_anonymous.go
+
+* defer
+.background Go-Presentation-Theme.png
+.play defer_panic.go
+
+* Function supports
+
+.background Go-Presentation-Theme.png
+- anonymous functions
+- closures functions
+- first-class functions
+- variadic functions
+
+* Anonymous Function
+.background Go-Presentation-Theme.png
+.play func_anonymous.go
+
+* Closure Function
+.background Go-Presentation-Theme.png
+.play func_closure.go
+
+* Closure Function
+.background Go-Presentation-Theme.png
+.play func_closure_more.go
+
+* First-Class Function
+.background Go-Presentation-Theme.png
+.play func_firstclass.go
