@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 )
 
@@ -22,13 +21,10 @@ func main() {
 	}
 
 	var rec rectangle
-
 	err := json.Unmarshal(jsonBlob, &rec)
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	fmt.Printf("%#v\n", rec)
 }
 
 // END OMIT

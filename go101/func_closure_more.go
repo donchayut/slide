@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	up, get := remoteCounterFactory()
+	up, get := factory()
 	up()
 	up()
 	fmt.Println(get())
@@ -12,7 +12,7 @@ func main() {
 	fmt.Println(get())
 }
 
-func remoteCounterFactory() (func(), func() int) {
+func factory() (func(), func() int) {
 	var i int
 	return func() {
 			i++
@@ -20,4 +20,4 @@ func remoteCounterFactory() (func(), func() int) {
 		func() int {
 			return i
 		}
-}
+} // END

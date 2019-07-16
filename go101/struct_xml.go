@@ -23,17 +23,20 @@ func main() {
 			},
 		},
 	}
+	// END OMIT1
 
+	// MarshalIndent
 	s, err := xml.MarshalIndent(&resp, "", "	")
 	if err != nil {
 		log.Fatal(err)
 	}
-	// END OMIT
+	// _MarshalIndent
 
 	fmt.Printf("%s", string(s))
 
 }
 
+// struct1
 type EnvelopeReq struct {
 	XMLName xml.Name  `xml:"soapenv:Envelope"`
 	Soapenv string    `xml:"xmlns:soapenv,attr"`
@@ -48,6 +51,10 @@ type HeaderReq struct {
 type BodyReq struct {
 	InquiryControlFileRequest InquiryControlFileReq `xml:"cbs:InquiryControlFileRequest"`
 }
+
+// _struct1
+
+// struct2
 
 type InquiryControlFileReq struct {
 	InquiryControlFileReqHeader InquiryControlFileReqHeader `xml:"cbs:InquiryControlFileReqHeader"`
@@ -66,6 +73,10 @@ type ReqClient struct {
 	ReqHeader ReqHeader `xml:"ReqHeader"`
 }
 
+// _struct2
+
+// struct3
+
 type ReqHeader struct {
 	ReqID      string `xml:"reqID"`
 	ReqChannel string `xml:"reqChannel"`
@@ -75,3 +86,5 @@ type ReqHeader struct {
 	Locale     string `xml:"locale"`
 	Service    string `xml:"service"`
 }
+
+// _struct3

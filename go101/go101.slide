@@ -11,17 +11,17 @@ yod.pallat@gmail.com
 https://github.com/pallat
 
 * Docker written in go
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .image docker.png
 .image gopher.png
 
 * What should you know
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .link https://tour.golang.org
 .link https://www.facebook.com/groups/584867114995854/ Golang Thailand
 
 * Installing
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .link https://golang.org
 
 *mac/linux*
@@ -36,7 +36,7 @@ Download file.zip
 
 
 * GOROOT
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
 *mac/linux*
 
@@ -52,13 +52,13 @@ Download file.zip
 
 
 * GOROOT vs GOPATH
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
 *GOROOT* is golang sdk
 *GOPATH* for projects & third-party libraries
 
 * Project structure
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     bin/
         hello                          # command executable
@@ -86,19 +86,19 @@ Download file.zip
         ... (many more repositories and packages omitted) ...
 
 * editor
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .link https://golang.org/doc/editors.html
 
 * editor 2019
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .image editor2019.png 500 _
 
 * Documentation
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .link https://golang.org/doc/
 
 * Keywords
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     break        default      func         interface    select
     case         defer        go           map          struct
@@ -109,13 +109,25 @@ Download file.zip
 
 * Hello World
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .link https://play.golang.org/
 .play hello.go
 
+* Killing feature
+
+.background whitebg.png
+
+.play killing.go
+
+* Killing feature
+
+.background whitebg.png
+
+.play killinggo.go
+
 * Package
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 - every *.go* file must have *package* keyword on top
 - package name should same with directory name
 - any directories can only have one package, except plus _test in it
@@ -124,25 +136,8 @@ such as
     package demo
     package demo_test 
 
-* Function
-.background Go-Presentation-Theme.png
-
-    func abs(m float64) float64 {
-        f := float64(m)
-        if f < 0 {
-            return -f
-        }
-        return f
-    }
-
-* Function
-
-.background Go-Presentation-Theme.png
-- func main
-- func init
-
 * Variable
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     var c, python, java bool
 
@@ -153,7 +148,7 @@ such as
     c, python, java := true, false, "no!"
 
 * Type
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
 basic type
 
@@ -174,8 +169,31 @@ basic type
 
     complex64 complex128
 
+* Function
+.background whitebg.png
+
+    func abs(m float64) float64 {
+        f := float64(m)
+        if f < 0 {
+            return -f
+        }
+        return f
+    }
+
+* Function
+
+.background whitebg.png
+- func main
+- func init
+
+* Excercise
+
+.background whitebg.png
+A function get any number then returns a charactor
+
+
 * idiom
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
 *Good name*
 
@@ -189,7 +207,7 @@ basic type
     Ex: NewRing
 
 * idiom
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
 *getter*
 
@@ -211,7 +229,7 @@ basic type
 
 * Zero Value
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
 - *0*  _for_ _numeric_ _types_
 - *false* _for_ _the_ _boolean_ _type_
@@ -219,7 +237,7 @@ basic type
 
 * const
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 iota
 
     iota expression is repeated by the other constants 
@@ -227,7 +245,7 @@ iota
 
 * if
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     func sqrt(x float64) string {
         if x < 0 {
@@ -242,7 +260,7 @@ if {} else if {} else {}
 
 * if statement; condition {}
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     func pow(x, n, lim float64) float64 {
         if v := math.Pow(x, n); v < lim {
@@ -251,9 +269,21 @@ if {} else if {} else {}
         return lim
     }
 
+* Excercise
+
+.background whitebg.png
+A function get a score then returns grade
+
+    score 91-100 is A
+    score 81- 90 is B
+    score 71- 80 is C
+    score 61- 70 is D
+    score less than or equal 60 is F
+
+
 * for
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     for init; condition; post { }
 
@@ -265,22 +295,22 @@ if {} else if {} else {}
 
 * for is for
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play for_for.go
 
 * while is for
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play for_while.go
 
 * for multiple Value
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play for_multiple.go
 
 * array
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
 The type [n]T
 
@@ -288,7 +318,7 @@ The type [n]T
 
 * slice []T
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
     References to arrays
     Zero value is nil
     cap() number of elements in the underlying array
@@ -300,53 +330,53 @@ The type [n]T
 
 * Exercise
 
-.background Go-Presentation-Theme.png
-.link https://tour.golang.org/moretypes/18 Picture
+.background whitebg.png
+.link https://tour.golang.org/moretypes/18 https://tour.golang.org/moretypes/18
 
-- for
-- slice/array
-- cast type
-- first class function
+    - for
+    - slice/array
+    - cast type
+    - first class function
 
 * Excercise
 
-.background Go-Presentation-Theme.png
-
-read csv file and print it out
-format [aaa] - [bbb] [ccc] - ...
+.background whitebg.png
 
 .link https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html
-.link https://golang.org/pkg/encoding/csv/ https://golang.org/pkg/encoding/csv/
+    grades.csv
 
-* TDD FizzBuzz
+    read that file then print out their grades
 
-.background Go-Presentation-Theme.png
-1 === "1"
-2 === "2"
-3 === "Fizz"
-4 === "4"
-5 === "Buzz"
-6 === "Fizz"
-7 === "7"
-8 === "8"
-9 === "Fizz"
-10 === "Buzz"
-11 === "11"
-12 === "Fizz"
-13 === "13"
-14 === "14"
-15 === "FizzBuzz"
-30 === "FizzBuzz"
+* TDD Grades
 
-* Ecercise RESTful service with net/http
+.background whitebg.png
 
-.background Go-Presentation-Theme.png
-.link https://golang.org/pkg/net/http/#example_ListenAndServe https://golang.org/pkg/net/http/#example_ListenAndServe
+    0 is "F"
+    10 is "F"
+    20 is "F"
+    30 is "F"
+    40 is "F"
+    50 is "F"
+    60 is "F"
+    70 is "D"
+    80 is "C"
+    90 is "B"
+    100 is "A"
+
+* TDD Grades
+
+.background whitebg.png
+
+    51 is "F"
+    61 is "D"
+    71 is "C"
+    81 is "B"
+    91 is "A"
 
 
 * map map[T]T
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     Zero value is nil
     len() number of elements it contains
@@ -360,10 +390,28 @@ When iterating over a map with a range loop,
 the iteration order is *not* *specified*
 and is *not* *guaranteed* to be the same from one iteration to the next.
 
-* Exercise TodoList store in mem
+* Exercise Convert Arabic to Thai number
+
+Please use map
+
+    map[string]string {
+        "0": "๐",
+        "1": "๑",
+        "2": "๒",
+        "3": "๓",
+        "4": "๔",
+        "5": "๕",
+        "6": "๖",
+        "7": "๗",
+        "8": "๘",
+        "9": "๙",
+    }
+
+    2019-07-18 23:56:44
+    ๒๐๑๙-๐๗-๑๘ ๒๓:๕๖:๔๔
 
 * Custom Type
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     type newType T
 
@@ -372,27 +420,36 @@ and is *not* *guaranteed* to be the same from one iteration to the next.
 * struct
 is a type custom
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play struct.go
 
 * struct
-.background Go-Presentation-Theme.png
 represents json
 .play struct_json.go /^func main/,/END OMIT/
 
 * struct
-.background Go-Presentation-Theme.png
 represents xml
-.play struct_xml.go /^func main/,/END OMIT/
+.play struct_xml.go /^	resp/,/END OMIT1/
 
+* struct
+represents xml
+.play struct_xml.go /MarshalIndent/,/_MarshalIndent/
 
-* Exercise TodoList store to Postgre
+* struct
+represents xml
+.play struct_xml.go /struct1/,/_struct1/
 
-* Exercise TodoList store to MongoDB
+* struct
+represents xml
+.play struct_xml.go /struct2/,/_struct2/
+
+* struct
+represents xml
+.play struct_xml.go /struct3/,/_struct3/
 
 
 * Custom Type: func
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     type newType T
 
@@ -400,7 +457,7 @@ represents xml
 
 
 * Alias Type
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     type alias = T
 
@@ -408,40 +465,166 @@ represents xml
 
 * method
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play struct_func.go
 
 * method
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play struct_method.go
 
-* method
+* method on primitive type
 
-.background Go-Presentation-Theme.png
-on any type custom
+.background whitebg.png
+
+    type text string
+
+    func (t *text) set(s string) {
+        *t = text(s)
+    }
+
+    func (t *text) get() string {
+        return string(*t)
+    }
+
+    func main() {
+        var t text
+        t.set("sss")
+        fmt.Println(t.get())
+
+    }
+
+* method on function type
+
+.background whitebg.png
+
+    type text func() string
+
+    func (t text) get() string {
+        return t()
+    }
+
+    func lambda() string {
+        return "function"
+    }
+
+    func main() {
+    //	var t text = lambda
+        t := text(lambda)
+        fmt.Println(t.get())
+
+    }
+
+* Function supports
+
+.background whitebg.png
+- anonymous functions
+- closures functions
+- first-class functions
+- variadic functions
+
+* Anonymous Function
+.background whitebg.png
+.play func_anonymous.go
+
+* Closure Function
+.background whitebg.png
+.play func_closure.go
+
+* Closure Function
+.background whitebg.png
+.play func_closure_more.go /func main/,/} // END/
+
+* First-Class Function
+.background whitebg.png
+.play func_firstclass.go
+
+* method on function type
+
+.background whitebg.png
+
+    type text func() string
+
+    func (t text) get() string {
+        return t()
+    }
+
+    func lambda() string {
+        return "function"
+    }
+
+    func main() {
+    	var t text = lambda
+    //    t := text(lambda)
+        fmt.Println(t.get())
+
+    }
+
+* method on function type
+
+.background whitebg.png
+
+    type text func() string
+
+    func (t text) get() string {
+        return t()
+    }
+
+    func main() {
+        var t text = func() string {
+            return "function"
+        }
+
+        fmt.Println(t.get())
+
+    }
+
+* method on function type
+
+.background whitebg.png
+
+    type text func() string
+
+    func (t text) get() string {
+        return t()
+    }
+
+    func factory(s string) text {
+        return func() string {
+            return s
+        }
+
+    }
+
+    func main() {
+        var t text = factory("gopher")
+        fmt.Println(t.get())
+
+    }
+
+
 
 * interface
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
 empty interface
 .play interface_empty.go
 
 * interface: type assertion
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
 .play interface_assert.go
 
 * interface: type switch
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play interface_switch.go
 
 * interface 
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
 To define a set of method signatures
 
@@ -460,7 +643,7 @@ To define a set of method signatures
 
 * interface: Stringer
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     type Stringer interface {
         String() string
@@ -468,7 +651,7 @@ To define a set of method signatures
 
 * interface: error
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 
     type error interface {
         Error() string
@@ -476,56 +659,115 @@ To define a set of method signatures
 
 * goroutine
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
+.play goroutine.go /^func main/,
 
-* channel
+* goroutine
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
+.play gowait.go /^func main/,
+
+
+* channel 
+
+.background whitebg.png
+
+keyword `chan`
+
+    * no buffered channel
+    * buffered channel
+
+
+* buffered channel
+
+.background whitebg.png
+
+.play chanbuf.go /^func main/,
+
+* no buffered channel
+
+.background whitebg.png
+
+.play gochan.go /^func main/,
+
 
 * defer
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play defer_simple.go
 
 * defer
 
 defer is stack
 
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play defer_stack.go
 
 * defer
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play defer_func.go
 
 * defer
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play defer_anonymous.go
 
 * defer
-.background Go-Presentation-Theme.png
+.background whitebg.png
 .play defer_panic.go
 
-* Function supports
+* fibonacci
+.background whitebg.png
+.play fibonacci.go /^func fibonacci/,
 
-.background Go-Presentation-Theme.png
-- anonymous functions
-- closures functions
-- first-class functions
-- variadic functions
+* fibonacci closure function
+.background whitebg.png
+.play fibonacci.go /^func fiboclosure/,/func fibonacci
 
-* Anonymous Function
-.background Go-Presentation-Theme.png
-.play func_anonymous.go
 
-* Closure Function
-.background Go-Presentation-Theme.png
-.play func_closure.go
+* fibonacci go routine
+.background whitebg.png
+.play fibonacci.go /^func fibogo/,/func fiboclosure
 
-* Closure Function
-.background Go-Presentation-Theme.png
-.play func_closure_more.go
+* RESTful service with net/http
 
-* First-Class Function
-.background Go-Presentation-Theme.png
-.play func_firstclass.go
+.background whitebg.png
+.link https://golang.org/pkg/net/http/#example_ListenAndServe https://golang.org/pkg/net/http/#example_ListenAndServe
+
+    package main
+
+    import (
+        "io"
+        "log"
+        "net/http"
+    )
+
+    func main() {
+        // Hello world, the web server
+
+        helloHandler := func(w http.ResponseWriter, req *http.Request) {
+            io.WriteString(w, "Hello, world!\n")
+        }
+
+        http.HandleFunc("/hello", helloHandler)
+        log.Fatal(http.ListenAndServe(":8080", nil))
+    }
+
+* connect to MySQL
+
+.background whitebg.png
+.link http://go-database-sql.org/ http://go-database-sql.org/
+.link https://rfam.readthedocs.io/en/latest/database.html https://rfam.readthedocs.io/en/latest/database.html
+
+    2019/07/16 11:44:29 CL00107 Created in error. ruthe
+    2019/07/16 11:44:29 CL00109 Only one family in clan after QC for Rfam 12.0 swb
+
+
+* connect to MySQL
+
+.background whitebg.png
+.code mysql.go /func main/,/for/
+
+* connect to MySQL
+
+.background whitebg.png
+.code mysql.go /	for/,

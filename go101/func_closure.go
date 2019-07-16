@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	counter := counterFactory()
+	counter := factory()
 	fmt.Println(counter())
 	fmt.Println(counter())
 	fmt.Println(counter())
 }
 
-func counterFactory() func() int {
+func factory() func() int {
 	i := 0
 	return func() int {
 		i++
