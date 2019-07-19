@@ -10,15 +10,14 @@ golang developer
 yod.pallat@gmail.com
 https://github.com/pallat
 
-* Docker written in go
-.background whitebg.png
-.image docker.png
-.image gopher.png
-
 * What should you know
 .background whitebg.png
 .link https://tour.golang.org
 .link https://www.facebook.com/groups/584867114995854/ Golang Thailand
+.link https://awesome-go.com/ https://awesome-go.com/
+.link https://gobyexample.com/ https://gobyexample.com/
+.link https://golang.org/doc/ https://golang.org/doc/
+
 
 * Installing
 .background whitebg.png
@@ -93,9 +92,18 @@ Download file.zip
 .background whitebg.png
 .image editor2019.png 500 _
 
-* Documentation
+* go modules
+
 .background whitebg.png
-.link https://golang.org/doc/
+.link https://blog.golang.org/using-go-modules
+.link https://blog.golang.org/modules2019
+
+* go modules
+
+.background whitebg.png
+go version 1.11 - 1.12
+
+    export GO111MODULE=on
 
 * Keywords
 .background whitebg.png
@@ -113,13 +121,29 @@ Download file.zip
 .link https://play.golang.org/
 .play hello.go
 
-* Killing feature
+* How to make it work on our machine
+
+.background whitebg.png
+    mkdir workspace/hello
+    cd workspace/hello
+    touch main.go
+    code .
+    make the hello world code in main.go
+    go run main.go
+
+* How to make it work on our machine
+
+.background whitebg.png
+    go mod init github.com/gopher/hello
+    
+
+* just add go
 
 .background whitebg.png
 
 .play killing.go
 
-* Killing feature
+* just add go
 
 .background whitebg.png
 
@@ -446,6 +470,10 @@ represents xml
 * struct
 represents xml
 .play struct_xml.go /struct3/,/_struct3/
+
+* struct
+
+.link http://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html#Example9 json example
 
 
 * Custom Type: func
