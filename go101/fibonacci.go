@@ -29,8 +29,7 @@ func fibogo(fi chan int, q chan struct{}) {
 		select {
 		case <-q:
 			return
-		default:
-			fi <- a
+		case fi <- a:
 			a, b = b, a+b
 		}
 	}
