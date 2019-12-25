@@ -1,6 +1,6 @@
 go 101
 
-14:03 20 Mar 2018
+14:03 30 Nov 2019
 Tags: golang
 
 Pallat Anchaleechamaikorn
@@ -26,7 +26,7 @@ https://github.com/pallat
 *mac/linux*
 Download file.tar.gz
 
-    ~/goroot
+    /usr/local/go
 
 *windows*
 Download file.zip
@@ -39,7 +39,8 @@ Download file.zip
 
 *mac/linux*
 
-    export GOROOT=~/goroot
+    export GOPATH=~/go
+    export GOROOT=/usr/local/go
     export GOBIN=$GOPATH/bin
     export PATH=$GOBIN:$GOROOT/bin:$PATH
 
@@ -67,13 +68,8 @@ Download file.zip
             github.com/golang/example/
                 stringutil.a           # package object
     src/
-        github.com/golang/example/
-            .git/                      # Git repository metadata
         hello/
             hello.go               # command source
-        outyet/
-            main.go                # command source
-            main_test.go           # test source
         stringutil/
             reverse.go             # package source
             reverse_test.go        # test source
@@ -104,6 +100,13 @@ Download file.zip
 go version 1.11 - 1.12
 
     export GO111MODULE=on
+
+    the module is set to default in go 1.13
+
+* go module
+
+    go mod init
+    go list -m all
 
 * Keywords
 .background whitebg.png
@@ -214,6 +217,12 @@ basic type
 
 .background whitebg.png
 A function get any number then returns a charactor
+
+    grade(int) string {
+        ...
+    }
+    
+    grade(100)
 
 
 * idiom
@@ -326,11 +335,6 @@ A function get a score then returns grade
 
 .background whitebg.png
 .play for_while.go
-
-* for multiple Value
-
-.background whitebg.png
-.play for_multiple.go
 
 * array
 
